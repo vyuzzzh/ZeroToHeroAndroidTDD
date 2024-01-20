@@ -22,13 +22,13 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    override fun onSaveInstanceState(outState: Bundle) {
-        super.onSaveInstanceState(outState)
-        outState.putString(TEXT_VIEW_STATE_KEY, textView.text.toString())
-    }
-
-    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
-        super.onRestoreInstanceState(savedInstanceState)
-        textView.text = savedInstanceState.getString(TEXT_VIEW_STATE_KEY)
-    }
+//    override fun onSaveInstanceState(outState: Bundle) {
+//        super.onSaveInstanceState(outState)
+//        outState.putString(TEXT_VIEW_STATE_KEY, textView.text.toString())
+//    }
+//
+//    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+//        super.onRestoreInstanceState(savedInstanceState)
+//        textView.text = savedInstanceState.getString(TEXT_VIEW_STATE_KEY)
+//    }
 }
