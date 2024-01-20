@@ -17,8 +17,6 @@ class MainActivity : AppCompatActivity() {
         textView = findViewById(R.id.titleTextView)
         val button = findViewById<Button>(R.id.changeButton)
 
-        textView.text = savedInstanceState?.getString(TEXT_VIEW_STATE_KEY) ?: "Hello World!"
-
         button.setOnClickListener {
             textView.text = "I am an Android Developer!"
         }
@@ -27,5 +25,10 @@ class MainActivity : AppCompatActivity() {
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
         outState.putString(TEXT_VIEW_STATE_KEY, textView.text.toString())
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        textView.text = savedInstanceState.getString(TEXT_VIEW_STATE_KEY)
     }
 }
